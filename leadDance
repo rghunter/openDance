@@ -1,0 +1,50 @@
+#!/bin/sh
+# LEADER
+
+./udp_receiver
+echo "Lead Program Begins"
+./motor_initialize
+./motor_setposition 0 0
+./motor_gotoposition 8000
+./hang 128.197.50.116
+./motor_setposition 0 0
+./motor_gotoposition 3000
+#./hang 128.197.50.116
+./motor_gotoposition 0
+./hang 128.197.50.116
+./odometry_goto heading 0.7853
+./udp_sender 128.197.50.116 "start"
+./odometry_goto position 0.3 0
+#./hang 128.197.50.116
+./motor_setposition 0 0
+./motor_gotoposition -3703 3703
+#./hang 128.197.50.116
+./motor_setposition 0 0
+./motor_gotoposition 1481 -1481
+./hang 128.197.50.116
+./odometry_goto position 0.2 0
+#./hang 128.197.50.116
+./motor_setposition 0 0
+./motor_gotoposition -1481 1481
+./hang 128.197.50.116
+./motor_setposition 0 0
+./motor_gotoposition -3000
+#./hang 128.197.50.116
+./motor_gotoposition 0
+./hang 128.197.50.116
+./motor_gotoposition -3000
+#./hang 128.197.50.116
+./motor_gotoposition 0
+./hang 128.197.50.116
+./motor_setposition 0 0
+./motor_diff -20000 -30000 -d 4000
+#./hang 128.197.50.116
+./motor_setposition 0 0
+./motor_diff 20000 30000 -d 4000
+#./hang 128.197.50.116
+./motor_setposition 0 0
+./motor_diff -30000 -20000 -d 4000
+#./hang 128.197.50.116
+./motor_setposition 0 0
+./motor_diff 30000 20000 -d 4000
+#./hang 128.197.50.116

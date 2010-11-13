@@ -1,0 +1,47 @@
+#!/bin/sh
+# FOLLOWER
+
+./udp_receiver
+echo "Follower Program Begins"
+./motor_initialize
+./motor_setposition 0 0
+./motor_gotoposition 8000
+./motor_setposition 0 0
+./hang 128.197.50.207
+./motor_gotoposition -3000
+#./hang 128.197.50.207
+./motor_gotoposition 0
+./motor_gotoposition -5790 5790
+./motor_setposition 0 0
+./hang 128.197.50.207
+#./udp_receiver
+./motor_gotoposition -3000
+#./hang 128.197.50.207
+./odometry_goto position 0.5 0
+./hang 128.197.50.207
+#./odometry_goto position 0.2 0
+#./hang 128.197.50.207
+./motor_setposition 0 0
+./motor_gotoposition -2895 2895
+./hang 128.197.50.207
+./motor_setposition 0 0
+./motor_gotoposition 3000
+#./hang 128.197.50.207
+./motor_gotoposition 0
+./hang 128.197.50.207
+./motor_gotoposition 3000
+#./hang 128.197.50.207
+./motor_gotoposition 0
+./hang 128.197.50.207
+./motor_setposition 0 0
+./motor_diff -30000 -20000 -d 4000
+#./hang 128.197.50.207
+./motor_setposition 0 0
+./motor_diff 30000 20000 -d 4000
+#./hang 128.197.50.207
+./motor_setposition
+./motor_diff -20000 -30000 -d 4000
+#./hang 128.197.50.207
+./motor_setposition 0 0
+./motor_diff 20000 30000 -d 4000
+#./hang 128.197.50.207
