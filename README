@@ -1,0 +1,12 @@
+Ryan G. Hunter
+Intelligent Mechatronics Lab
+Boston, MA
+02215
+
+Open Dance
+
+	Open loop salsa dancing program for khepera III. Just run lead and follow programs on respective vehicles. Support binarys required from support directory, there will be a bin folder added that will contain all you need. You will be able to scp the whole folder to the vehicles root directory and execute.
+
+Initial Conditions:
+
+	Vehicles start facing eachother with approximatly 40 inches of seperation.
